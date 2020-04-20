@@ -10,7 +10,7 @@ describe("ball", () => {
     });
 
     it("exists", () => {
-        assert.equal(typeof ball, "object", "ball is an object");
+        expect(ball).to.exist;
     });
 
     it("has coordinates", () => {
