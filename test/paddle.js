@@ -32,4 +32,14 @@ describe("paddle", () => {
         paddle.moveRight(1);
         assert.equal(paddle.y, 1);
     });
+
+    it("can move left by 5", () => {
+        paddle.moveLeft(5);
+        assert.equal(paddle.x, -5);
+    });
+
+    it("can move right by 5", () => {
+        paddle.moveRight(5);
+        assert.equal(paddle.y, 5);
+    });
 });

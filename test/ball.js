@@ -25,26 +25,41 @@ describe("ball", () => {
 
     it("can move left by 1", () => {
         ball.moveLeft(1);
-        assert.equal(ball.x, -1, "ball x to be -1");
+        assert.equal(ball.x, -1);
     });
 
     it("can move right by 1", () => {
         ball.moveRight(1);
-        assert.equal(ball.x, 1, "ball x to be 1");
+        assert.equal(ball.x, 1);
     });
 
     it("can move up by 1", () => {
         ball.moveUp(1);
-        assert.equal(ball.y, -1, "ball y to be -1");
+        assert.equal(ball.y, -1);
     });
 
     it("can move down by 1", () => {
         ball.moveDown(1);
-        assert.equal(ball.y, 1, "ball y to be 1");
+        assert.equal(ball.y, 1);
     });
 
-    it("has has a dimension of 5x5", () => {
-        assert.equal(ball.width, 5, "ball width of 5");
-        assert.equal(ball.height, 5, "ball height of 5");
+    it("can move left by 5", () => {
+        ball.moveLeft(5);
+        assert.equal(ball.x, -5);
+    });
+
+    it("can move right by 5", () => {
+        ball.moveRight(5);
+        assert.equal(ball.x, 5);
+    });
+
+    it("can move up by 5", () => {
+        ball.moveUp(5);
+        assert.equal(ball.y, -5);
+    });
+
+    it("can move down by 5", () => {
+        ball.moveDown(5);
+        assert.equal(ball.y, 5);
     });
 });
