@@ -14,8 +14,13 @@ describe("ball", () => {
     });
 
     it("has coordinates", () => {
-        expect(ball).to.have.own.property("x", 0, "x coordinate");
-        expect(ball).to.have.own.property("y", 0, "y coordinate");
+        expect(ball).to.have.own.property("x");
+        expect(ball).to.have.own.property("y");
+    });
+
+    it("has dimensions", () => {
+        expect(ball).to.haveOwnProperty("width");
+        expect(ball).to.haveOwnProperty("height");
     });
 
     it("can move left by 1", () => {
