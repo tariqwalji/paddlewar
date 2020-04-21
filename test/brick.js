@@ -9,12 +9,12 @@ describe("Brick", () => {
     });
 
     it("has coordinates", () => {
-        expect(brick).to.haveOwnProperty("x", 0, "x coordinate");
-        expect(brick).to.haveOwnProperty("y", 0, "y coordinate");
+        expect(brick).to.haveOwnProperty("x");
+        expect(brick).to.haveOwnProperty("y");
     });
 
     it("has dimensions", () => {
-        expect(brick).to.haveOwnProperty("width", 100);
-        expect(brick).to.haveOwnProperty("height", 50);
+        expect(brick).to.haveOwnProperty("width");
+        expect(brick).to.haveOwnProperty("height");
     });
 });
