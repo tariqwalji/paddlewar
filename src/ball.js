@@ -1,6 +1,8 @@
 const ball = {
     x: 0,
     y: 0,
+    vx: 0,
+    vy: 0,
     width: 5,
     height: 5,
 
@@ -18,6 +20,14 @@ const ball = {
 
     moveDown(step) {
         this.y += step;
+    },
+
+    collidedWith(collisionObject) {
+        return (collisionObject.x <= this.x + this.width && collisionObject.x + collisionObject.width >= this.x &&
+               collisionObject.y <= this.y + this.height && collisionObject.y + collisionObject.height >= this.y) 
+               || 
+               (this.x <= collisionObject.x + collisionObject.width && this.x + this.width >= collisionObject.x &&
+                this.y <= collisionObject.y + collisionObject.height && this.y + this.height >= collisionObject.y);
     }
 };
 

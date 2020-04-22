@@ -62,4 +62,9 @@ describe("ball", () => {
         ball.moveDown(5);
         assert.equal(ball.y, 5);
     });
+
+    it("has velocity", () => {
+        expect(ball).to.haveOwnProperty("vx");
+        expect(ball).to.haveOwnProperty("vy");
+    });
 });
